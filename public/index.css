@@ -72,3 +72,14 @@ body{
 .genre:active{
     background-color: rgb(32, 24, 13);
 }
+.export{
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 8rem;
+    height: 2rem;
+    margin: 10px;
+    border:none;
+    background-color: rgb(10, 7, 5);
+    color: white;
+}
