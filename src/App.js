@@ -37,6 +37,38 @@ function App() {
     //  console.log(updatedlist);
      setMovies(updatedlist);
   }
+
+
+  const filtervotehigh=()=>{
+
+     const updatedlist=movies.filter((movie)=>{
+
+
+      return movie.vote_average>=7.5;
+     });
+    //  console.log(updatedlist);
+     setMovies(updatedlist);
+  }
+  const filtervotelow=()=>{
+
+     const updatedlist=movies.filter((movie)=>{
+
+
+      return movie.vote_average<7.5;
+     });
+    //  console.log(updatedlist);
+     setMovies(updatedlist);
+  }
+  const popularmovies=()=>{
+
+     const updatedlist=movies.filter((movie)=>{
+
+
+      return movie.popularity>700;
+     });
+    //  console.log(updatedlist);
+     setMovies(updatedlist);
+  }
 const filename="movies-data-webapp";
 
   return (
@@ -53,7 +85,14 @@ const filename="movies-data-webapp";
       <button className="genre" onClick={()=>filtergenre(35)}>Comedy</button>
       <button className="genre" onClick={()=>filtergenre(14)}>Fantasy</button>
       <button className="genre" onClick={()=>setMovies(movieArray)}>All Movies</button>
+      <button className="popular" onClick={()=>popularmovies()}>Popular Movies</button>
       <ExportCSV csvData={movies} fileName={filename} />
+      </div>
+      <div> 
+      <button className="voterate" onClick={()=>filtervotehigh()}>High rating movies</button>
+      <button className="voterate" onClick={()=>filtervotelow()}>Low rating movies</button>
+      
+      
       </div>
     </center>
     <div className="movie-container">

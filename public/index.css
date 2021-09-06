@@ -83,3 +83,28 @@ body{
     background-color: rgb(10, 7, 5);
     color: white;
 }
+.voterate{
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 8rem;
+    height: 3rem;
+    margin: 10px;
+    border:none;
+    background-color: rgb(44, 35, 32);
+    color: white;
+}
+.popular{
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 8rem;
+    height: 2rem;
+    margin: 10px;
+    border:none;
+    background-color: rgb(78, 41, 29);
+    color: white;
+}
+.voterate:active{
+    background-color: rgb(32, 24, 13);
+}
